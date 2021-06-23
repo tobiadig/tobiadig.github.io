@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>platepy API documentation</title>
+<meta name="description" content="*Copywrite Tobia Diggelmann (ETH Zurich) 23.06.2021.* …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Package <code>platepy</code></h1>
+</header>
+<section id="section-intro">
+<p><em>Copywrite Tobia Diggelmann (ETH Zurich) 23.06.2021.</em></p>
+<p>Provides</p>
+<ul>
+<li>Methods to easily model structural components for plates via the gmsh API (see <a href="https://gmsh.info/">https://gmsh.info/</a>).</li>
+<li>Mesh generation via gmsh API.</li>
+<li>FEM calculation of displacements, rotations, bending moments, shear forces and required bending moment resistance according to SIA262.</li>
+<li>Results visualization.</li>
+<li>Analythical solutions according to Kirchhoff plate theory.</li>
+</ul>
+<p>The present documentation provides the user with an overview of the package and its functioning. For a more <em>hands-on</em> approach to getting started, refer to the two tutorials in appendix <a href="#A. Tutorials">A. Tutorials</a>.</p>
+<h1 id="1-introduction">1. Introduction</h1>
+<p>The purpose of the present package, developed during a master thesis at the ETH Zurich, is to provide a simple set of tools to model and compute plate models using Finite Elements. The package is based on the <code>Gmsh API</code>, used to create geometrical models and to discretize the system into elements. The package has been developed for users with knowledge about civil engineering, while every aspect regarding finite elements has been automatizated as much as possible. This allows for a basic FE-modelling without direct knowledge of FEM. However, all kind of parameters regarding meshing and computation can be custoimized. </p>
+<h1 id="2-getting-started">2. Getting started</h1>
+<p>Platepy is available on <a href="https://pypi.org/project/platepy/,">https://pypi.org/project/platepy/,</a> and can therefore be obtained through the terminal with the command (without the $ sign):</p>
+<p><code>$ pip install platepy</code></p>
+<p>Alternatively, if problems with accessing to the package through the global path are encountered, the packages can be acessed on the Github repository: <a href="https://github.com/tobiadig/platepy.">https://github.com/tobiadig/platepy.</a> All downloaded module should be in a folder named "platepy" and located in the working directory.</p>
+<p>When the platepy package has been downloaded (via pip or via Github, and located in the working directory) the functions in the package can be accessed in a Python script with the command <code>from platepy import *</code>. Then you are ready to go.</p>
+<p>Following packages are required for the correct functioning of platepy:</p>
+<ul>
+<li>numpy</li>
+<li>scipy</li>
+<li>matplotlib</li>
+<li>pandas</li>
+<li>gmsh</li>
+<li>tqdm</li>
+</ul>
+<p>All these packages can be installed through pip with the command (without the $ sign)</p>
+<p><code>$ pip install numpy, scipy, matplotlib, pandas, gmsh, tqdm</code></p>
+<p>Note: On windows, in order to access the packages, the system has to be restarted after installation (to update the global path to the packages).</p>
+<h1 id="3-how-to-use-platepy">3. How to use platepy</h1>
+<p>Once the functions of platepy are accessible, the workflow is as follows:</p>
+<ol>
+<li>Create a model where structural components (slabs, walls, columns etc.) and loads are difined.</li>
+<li>Generate a mesh.</li>
+<li>Solve the system using FEM.</li>
+<li>Display the results.</li>
+</ol>
+<p>Each steps is presented in the following steps, exemples are provided in <a href="#A. Tutorials">A. Tutorials</a></p>
+<h2 id="31-create-a-model">3.1. Create a model</h2>
+<p><strong> Create model with the Gmsh API </strong></p>
+<p>The package can be used to model a plate static system. The plate model is represented by a <code>PlateModel</code> class. A model can be instantiated as follows:
+::</p>
+<pre><code>exampleModel = PlateModel()
+</code></pre>
+<p>The user has then to define all the components which compose the static system toghether with their properties, and the loads acting on the system. The components have then to be added to the <code>PlateModel</code> object. The available structural components are:</p>
+<ul>
+<li>plates</li>
+<li>walls</li>
+<li>columns</li>
+<li>downstand beams</li>
+</ul>
+<p>The procedure to add a structural component is:</p>
+<ol>
+<li>Create a dictionary. Create the required entries, these are documented in the submodel <a href="#create">platepy.createModel</a>.</li>
+<li>Instantiate the structural component's class with the created dictionary.</li>
+<li>Add the object to the <code>PlateModel</code> with the specific method of the component.</li>
+</ol>
+<p>The general strucutre is therefore as follows: ::</p>
+<pre><code>inputDic = {}
+inputDic['entry1'] = value1
+inputDic['entry2'] = value2
+&lt;component&gt;Object = &lt;Component&gt;Class(inputDic)
+exampleModel.add&lt;Component&gt;(&lt;component&gt;Object)
+</code></pre>
+<p>The loads are defined similarly with the <code>Load</code> class.</p>
+<p>NOTE: It is advisable to check if the geometry has been correctely defined before moving to the next steps of the analysis. To inspect the geometry call the <code>plotInputGeometry function</code> defined in <a href="#displayModel">displayModel</a>.</p>
+<p>NOTE: Plate outline has to be a closed polygon, points defining walls and downstand beams <strong>have</strong> to lie inside the plate or to coincide with corners of the plate. <strong> Walls and downstand beams startin or ending on a plate's edge will raise an error</strong>. In this cases, add points to the plate's outline coordinates accordingly.</p>
+<p><strong> Create model manually </strong></p>
+<p>It is also possible for the user to manually define the nodes positions, the element connectivity, blocked DOFs and nodal forces. See <a href="#Manually generate mesh">Manually generate mesh</a></p>
+<h2 id="32-generate-mesh">3.2. Generate mesh</h2>
+<p><strong> Generate mesh automatically with Gmsh</strong></p>
+<p>The mesh of the created model can be automatically generated with the Gmsh API. Call the <code><a title="platepy.generateMesh" href="generateMesh.html">platepy.generateMesh</a></code> function defined in <a href="#generateMesh">generateMesh</a>. The most critical parameter is the mesh size. By default the meshSize is 0.6m, which works OK for plates with a size in the range of 8-12m. It is therefore important to inspect the mesh before the next steps of the analysis and to check if the mesh size is too coarse (risk of inaccurate results) or too fine (risk of the calculation taking too long). On an normal laptop, a model with up to 4'000 elements is generally sufficiently fast (ca. 400 elements/s).</p>
+<p>The mesh can be expected by setting the parameter <code>showGmshMesh</code> to True.</p>
+<p>NOTE: The automatic generation of the mesh is generally a critical step, since not always the Gmsh library is able to generate the elements and the errors raised are cryptic. If a mesh cannot be generated, try following steps:</p>
+<ol>
+<li>
+<p>Check if the geometry has been correctely defined. The geometry can also be inspected with by setting the <code>showGmshGeometryBeforeMeshing</code> option of the generateMesh function to True. </p>
+<p>a. Plate outline has to be a closed polygon.</p>
+<p>b. Points defining walls and downstand beams <strong>have</strong> to lie inside the plate or to coincide with corners of the plate. <strong> Walls and downstand beams starting or ending on a plate's edge will raise an error</strong>. In this cases, add points to the plate's outline coordinates accordingly.</p>
+<p>c. Columns have either to lie inside the plate (with the <code>isInPlate</code> option setted to True), or to lie on a plate's corner. <strong> Columns lying on a plate's edge will raise an error</strong>.</p>
+</li>
+<li>
+<p>By very sharp angles or very close structural elements, it is possible that Gmsh fails to generate a mesh. Try a finer mesh or simplify the model.</p>
+</li>
+<li>If the meshSize is too large compared to the model's size, an error will rise.</li>
+</ol>
+<p><a name="Generate mesh manually"></a><strong>Generate mesh manually</strong></p>
+<p>It is also possible for the user to manually define the nodes positions, the element connectivity, blocked DOFs and nodal forces. This is particularly useful if a simple, yet precise mesh is required (for example for a patch test). An example is shown in <a href="#t3">tutorial 3</a>.</p>
+<h2 id="33-solve">3.3. Solve</h2>
+<p>Once the mesh has been successfully generated, the system can be solved by calling the <code><a title="platepy.solveModel" href="solveModel.html">platepy.solveModel</a></code> function of the submodule <a href="#solveModel">solveModel</a>. The results have to be scaled accor5ding to the dimensions used in the input value. It is advised to use dimensions consistently in order to get the right results (for example meters and kN). To get displacements in mm, moments in kNm and shear forces in kN, the result scale tuple will be (0.001,1,1). The user can also choose the position where the internal forces should be evauated with the <code>internalForcePosition</code> parameter. By default internal forces are evaluated at the center of each element.</p>
+<p>After the calculation, the user can also compute the values along an arbitrary line using the <code>computeBeamComponents</code> function. Single or multiple specific points can be evaluated with the <code>evaluateAtPoints</code> function.</p>
+<h2 id="34-display-results">3.4. Display results</h2>
+<p>The submodule <a href="#displayModel">displayModel</a> contains all functions which allow to display the results. Platepy allows to:</p>
+<ul>
+<li>Display the input geometry with the <code>plotInputGeometry</code> function.</li>
+<li>Display the mesh with <code>plotMesh</code>. This is an alternative to the build-in Gmsh GUI, activated by setting the <code>showGmshMesh</code> parameter of the <code><a title="platepy.generateMesh" href="generateMesh.html">platepy.generateMesh</a></code> function equal to True. plotMesh also allow to save the image.</li>
+<li>Display displacements and internal forces with the <code>plotResults</code> function. Refer to the submodule <a href="#displayModel">displayModel</a> for details.</li>
+<li>Display results along an arbitrary line, computed previously with the <code>computeBeamComponents</code> function.</li>
+</ul>
+<p>The created images can be manually saved through the plt.show() interface, or automatically saved in SVG format by setting the <code>saveToSVG</code> parameter equal to True.</p>
+<h1 id="a-tutorials"><a name="A. Tutorials"></a> A. Tutorials</h1>
+<h2 id="a1-creating-a-simple-slab-geometry-and-computing-the-fem-solution"><a name="t1"></a>A.1. Creating a simple slab geometry and computing the FEM solution</h2>
+<pre><code># ------------------------------------------------------------------------------
+#
+#  platepy tutorial 1
+#
+# Creating a simple slab geometry and computing the FEM solution
+#
+# ------------------------------------------------------------------------------
+
+# The program is entirely defined in the `platepy.py' module (which contains the
+# full documentation of all the function). The easier way is to directely import
+# all function with the * command:
+from platepy import *
+import numpy as np
+
+# The model will now be initialized
+tutorialModel = PlateModel()
+
+# To define the structural components of the model a dictionary has to be created.
+# The required entries of the dictionary are described in the documentation of the 
+# relative class.
+
+# let's define the concrete by defining the dictionary and the required entries:
+# (attention to the units! by default all lengths are considered to be in meters,
+# forces in kN).
+concreteDict = {}
+concreteDict["eModule"] = 32.1*1e6 #kN/m2
+concreteDict["gModule"] =  14.36*1e6 #kN/m2
+concreteDict["nu"] = 0.17
+C25_30 = Concrete(concreteDict)
+
+# alternatively, a standard concrete type can be used:
+C30_37 = StandardConcrete("C30_37")
+
+
+# Let's now define the structural components with the same procedure.
+# First a square plate with a 10m side:
+plateDict = {}
+plateDict["outlineCoords"]=np.array([[0,0], [10,0],[10,10], [0,10], [0, 0]])
+plateDict["thickness"] = 0.3
+plateDict["body"]=C30_37
+plate = Plate(plateDict)
+
+# and let's add the plate to the model:
+tutorialModel.addPlate(plate)
+
+# now we define two walls on the left and right sides of the plate:
+# the wall dictionary can be re-used by only changing the outline.
+wallDict = {}
+wallDict["outlineCoords"] = np.array([[0,0],[0,10]])
+wallDict["thickness"] = 0.5 # m
+# The entries in the support array define is the relative DOF is free (0)
+# or blocked (1). The first entry is the vertical displacement, the second
+# is the rotation on the axis in the direction of the wall, the third entry
+# is the rotation on the axis perpendicular to the wall. For simply supported
+# hard boundary condition:
+wallDict["support"] = np.array([1, 0, 1])
+wall1 = Wall(wallDict)
+
+# the second wall:
+wallDict["outlineCoords"] = np.array([[10,0],[10,10]])
+wall2 = Wall(wallDict)
+
+# and add to the model:
+tutorialModel.addWall(wall1)
+tutorialModel.addWall(wall2)
+
+# add a column in the center:
+columnDict = {}
+columnDict["outlineCoords"] = np.array([[5,5]])
+columnDict["support"] = np.array([1, 0, 0])
+columnDict["width"] = 0.5
+col1 = Column(columnDict, isInPlate=True) # if the plate is inside the plate, set "isInPlate = True"
+tutorialModel.addColumn(col1)
+
+# Lastly, a constant load distributed over the plate:
+load = Load('area', np.array([-10,0,0]))
+tutorialModel.addLoad(load)
+
+# The model is ready! Let's check the geomety and then 
+# generate the mesh and see if the finess is
+# appropriate or has the be adjusted
+plotInputGeometry(tutorialModel)
+plt.show()
+generateMesh(tutorialModel, showGmshMesh=True)
+
+# The mesh has been generated correctly, let's solve the model.
+# The scale for the displacements has been changed to 1e3, in
+# order to transform m to mm
+solveModel(tutorialModel, resultsScales=(1e3,1,1))
+#
+# Now the results can be plotted, for example
+# Vertical displacements, bending moments and shear in x-direction
+plotResults(tutorialModel, ['vDisp', 'Mx', 'Vx'])
+plt.show()
+</code></pre>
+<h2 id="a2-downstand-beams-and-plotting-results-over-a-line-schnitte"><a name="t2"></a>A.2. Downstand beams and plotting results over a line ('Schnitte')</h2>
+<pre><code># ------------------------------------------------------------------------------
+#
+#  platepy tutorial 2
+#
+# Downstand beams and plotting results over a line ('Schnitte')
+#
+# ------------------------------------------------------------------------------
+
+# Let's create a model with a square plate supported by two walls on opposite
+# Edges, but this time with a downstand beam spanning between the walls.
+# Important is to add coordinates in the outline of walls and plates for
+#  where the downstand beam will come!
+
+from platepy import *
+import numpy as np
+tutorialModel = PlateModel()
+
+C30_37 = StandardConcrete("C25_30")
+
+plateDict = {}
+# points [10,5] and [0,5] have been added
+plateDict["outlineCoords"]=np.array([[0,0], [10,0],[10,5],[10,10], [0,10],[0,5], [0, 0]])
+plateDict["thickness"] = 0.3
+plateDict["body"]=C30_37
+plate = Plate(plateDict)
+tutorialModel.addPlate(plate)
+
+wallDict = {}
+wallDict["outlineCoords"] = np.array([[0,0],[0,5],[0,10]])
+wallDict["thickness"] = 0.5 # m
+wallDict["support"] = np.array([1, 0, 1])
+wall1 = Wall(wallDict)
+wallDict["outlineCoords"] = np.array([[10,0],[10,5],[10,10]])
+wall2 = Wall(wallDict)
+tutorialModel.addWall(wall1)
+tutorialModel.addWall(wall2)
+
+# Let's now define a downstand beam spanning between the two walls
+dsbDic = {}
+dsbDic['outlineCoords'] = np.array([[0,5],[10,5]])
+dsbDic['body'] = C30_37
+# The cross section object stores information about the dsb:
+# Area, Iy, Iz, width and high (m and mm^4)
+dsbDic['crossSection'] = CrossSection(0.3*0.3, 0.3*4/12, 0, 0.3, 0.3)
+dsb = DownStandBeam(dsbDic)
+tutorialModel.addDownStandBeam(dsb)
+
+# Add the load:
+load = Load('area', np.array([-10,0,0]))
+tutorialModel.addLoad(load)
+
+# As in tutorial 1, let's check the geometry, generate the mesh and solve
+plotInputGeometry(tutorialModel)
+plt.show()
+generateMesh(tutorialModel)
+solveModel(tutorialModel, resultsScales=(1e3,1,1))
+
+# Instead of plotting the results with isolines, let's inspect a vertical cut
+# for Vertical displacements, bending moments and shear in y-direction
+
+# The cut is defined by starting and end coordinates, the number of points to be evaluated and 
+# the scale of the result
+computeBeamComponents(tutorialModel, (5,0), (5,10), 150, resultsScales=(1e3,1,1))
+
+# the results can be now plotted with the function plotBeamComponent
+# the suffix '_line' at the end of the desired plot has to be added
+plotBeamComponent(tutorialModel, ['vDisp_line', 'My_line', 'Vy_line'])
+plt.show()
+</code></pre>
+<h2 id="a3-manually-generate-mesh"><a name="t3"></a>A.3. Manually generate mesh</h2>
+<pre><code># ------------------------------------------------------------------------------
+#
+#  platepy tutorial 3
+#
+# Manually create a simple mesh
+#
+# ------------------------------------------------------------------------------
+
+
+#The present tutorial shows how to manually define nodes, element, boundary conditions
+# and nodal loads. This can be useful when a simple, yet precise defined mesh is required
+# For exampl for a patch test.
+
+# Let's prepare the model and the material
+import numpy as np
+from platepy import *
+
+tutorialModel = PlateModel()
+C25_30 = StandardConcrete("C25_30")
+
+# the plate has still to be assigned to the model in order to specify the material properties
+# of the elements
+plateDict = {}
+plateDict["outlineCoords"]=np.array([[0,0], [10,0]]) # the outline is irrelevant, since 
+                                                        # the shape will be manually defined later
+plateDict["thickness"] = 0.1
+plateDict["body"]=C25_30
+plate = Plate(plateDict)
+tutorialModel.addPlate(plate)
+
+# now, instead of defining loads, structural components and generate the mesh, all steps are
+# performed manually.
+
+# Firstly, the array of nodes coordinates has to be defined.
+nodesArray = np.array([[0,0],    # Node 1
+                        [10, 0], # Node 2
+                        [10,10], # Node 3
+                        [0,10],  # Node 4
+                        [2, 2],  # Node 5
+                        [8,3],   # Node 6
+                        [8,7],   # Node 7
+                        [4,7]])  # Node 8
+
+#Then the elements connectivity
+elements = np.array([[1,2,6,5], # Element 1
+                    [2,3,7,6],  # Element 2
+                    [7,3,4,8],  # Element 3
+                    [1,5,8,4],  # Element 4
+                    [5,6,7,8]]) # Element 5
+
+#Then, the boundary condition. The first column is the node of referenc, the other columns
+# define if ther relative DOF is blocked or free (vDisp/xRot/yRot). 
+# Let's clamp the left-hand side and block all rotations.
+BCs = np.array([[1, 1, 1, 1],
+                [4, 1, 1, 1],
+                [2, 0, 1, 1],
+                [3, 0, 1, 1],
+                [5, 0, 1, 1],
+                [6, 0, 1, 1],
+                [7, 0, 1, 1],
+                [8, 0, 1, 1]])
+
+# The nodal forces have to be defined. Let's put two vertical loads on the right-hand side.
+forces = np.array([[2, -5, 0, 0],
+                    [3, -5, 0, 0]])
+
+# A load object is created, then the "nodePattern" attribute is assigned with 
+# the above defined array of nodal forces
+forcePattern = Load('nodes', np.array([0,0,0])) # the magnitude is not used
+forcePattern.nodePattern=forces
+tutorialModel.addLoad(forcePattern)
+
+# nodes, elements and boundary conditions are assigned to the model with the setMesh function
+# differently from the generateMesh function, there is no default element type
+setMesh(tutorialModel, nodesArray, elements, BCs,  elementDefinition='MITC-4-N')
+
+solveModel(tutorialModel, resultsScales=(1e6,1,1))
+
+# Let's now look at the displacement in the individual nodes with the "tect+mesh" plot type
+plotResults(tutorialModel,plotType='text+mesh',valuesToPlotList=['vDisp'])
+plt.show()
+</code></pre>
+</section>
+<section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="platepy.analyticPlateSolutions" href="analyticPlateSolutions.html">platepy.analyticPlateSolutions</a></code></dt>
+<dd>
+<div class="desc"><p>Provide analytic plate bending solutions. Solutions stem from Timoshenko's book: "Plates and Shells" (1959) …</p></div>
+</dd>
+<dt><code class="name"><a title="platepy.createModel" href="createModel.html">platepy.createModel</a></code></dt>
+<dd>
+<div class="desc"><p><a name="create"></a> Defines the classes and methods needed to initialize the model and define the geometry …</p></div>
+</dd>
+<dt><code class="name"><a title="platepy.displayModel" href="displayModel.html">platepy.displayModel</a></code></dt>
+<dd>
+<div class="desc"><p><a name="displayModel"></a> Displays geometry and results of a plateModel class using <code>matplotlib</code> …</p></div>
+</dd>
+<dt><code class="name"><a title="platepy.generateMesh" href="generateMesh.html">platepy.generateMesh</a></code></dt>
+<dd>
+<div class="desc"><p><a name="generateMesh"></a> Generates and stores the mesh of a plate Model …</p></div>
+</dd>
+<dt><code class="name"><a title="platepy.solveModel" href="solveModel.html">platepy.solveModel</a></code></dt>
+<dd>
+<div class="desc"><p><a name="solveModel"></a>Computes the equilibrium solution of a plate model using finite elements and stores the results.</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul>
+<li><a href="#1-introduction">1. Introduction</a></li>
+<li><a href="#2-getting-started">2. Getting started</a></li>
+<li><a href="#3-how-to-use-platepy">3. How to use platepy</a><ul>
+<li><a href="#31-create-a-model">3.1. Create a model</a></li>
+<li><a href="#32-generate-mesh">3.2. Generate mesh</a></li>
+<li><a href="#33-solve">3.3. Solve</a></li>
+<li><a href="#34-display-results">3.4. Display results</a></li>
+</ul>
+</li>
+<li><a href="#a-tutorials"> A. Tutorials</a><ul>
+<li><a href="#a1-creating-a-simple-slab-geometry-and-computing-the-fem-solution">A.1. Creating a simple slab geometry and computing the FEM solution</a></li>
+<li><a href="#a2-downstand-beams-and-plotting-results-over-a-line-schnitte">A.2. Downstand beams and plotting results over a line ('Schnitte')</a></li>
+<li><a href="#a3-manually-generate-mesh">A.3. Manually generate mesh</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="platepy.analyticPlateSolutions" href="analyticPlateSolutions.html">platepy.analyticPlateSolutions</a></code></li>
+<li><code><a title="platepy.createModel" href="createModel.html">platepy.createModel</a></code></li>
+<li><code><a title="platepy.displayModel" href="displayModel.html">platepy.displayModel</a></code></li>
+<li><code><a title="platepy.generateMesh" href="generateMesh.html">platepy.generateMesh</a></code></li>
+<li><code><a title="platepy.solveModel" href="solveModel.html">platepy.solveModel</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>
