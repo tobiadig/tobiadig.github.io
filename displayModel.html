@@ -36,15 +36,15 @@
 <span>def <span class="ident">plotBeamComponent</span></span>(<span>self, valuesToPlotList, plotOnMesh=False, saveToSVG=False)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Display the requested line-results over the model structural components. </p>
+<div class="desc"><p>Display the requested line-results over the model structural components.</p>
 <pre><code>INPUT
 </code></pre>
 <ul>
-<li><strong>self</strong>: Solved <code>PlateModel</code> object with line-results stored. </li>
+<li><strong>self</strong>: Solved <code>PlateModel</code> object with line-results stored.</li>
 <li>
 <p><strong>valuesToPlotList</strong>: List of strings representing the requested output plots. Possible values are:</p>
 <ul>
-<li>"vDisp_line": Vertical displacements on a line. </li>
+<li>"vDisp_line": Vertical displacements on a line.</li>
 <li>"Mx_line": Bending moments in x-direction on a line.</li>
 <li>"My_line": Bending moments in y-direction on a line.</li>
 <li>"Mxy_line": Twisting moment on a lines.</li>
@@ -55,7 +55,7 @@
 <li>
 <p><strong>plotOnMesh = False</strong>: If True, the line results are plotted over the underlying mesh.</p>
 </li>
-<li><strong>saveToSVG = False</strong>: if True, saves the plot as SVG in the current folder. </li>
+<li><strong>saveToSVG = False</strong>: if True, saves the plot as SVG in the current folder.</li>
 </ul>
 <pre><code>RETURN
 </code></pre>
@@ -81,13 +81,13 @@
 <span>def <span class="ident">plotMesh</span></span>(<span>self, plotNodes=True, plotStrucElements=True, plotPoints=False)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Plot nodes and elements given an initialized mesh. </p>
+<div class="desc"><p>Plot nodes and elements given an initialized mesh.</p>
 <pre><code>INPUT
 </code></pre>
 <ul>
 <li><strong>self</strong>: <code>PlateModel</code> object with initialized mesh.</li>
-<li><strong>plotNodes = True</strong>: If True, plots the nodes with nummeration. </li>
-<li><strong>plotStrucElements = True</strong>: If True, also plots the underlying structural components. </li>
+<li><strong>plotNodes = True</strong>: If True, plots the nodes with nummeration.</li>
+<li><strong>plotStrucElements = True</strong>: If True, also plots the underlying structural components.</li>
 <li><strong>plotPoints = False</strong>: If True, plotes the nodes without nummeration.</li>
 </ul>
 <pre><code>RETURN
@@ -100,7 +100,7 @@
 <span>def <span class="ident">plotResults</span></span>(<span>self, valuesToPlotList, plotType='isolines', saveToSVG=False, saveImage=False)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Displays the requested result over the model's structural components. </p>
+<div class="desc"><p>Displays the requested result over the model's structural components.</p>
 <pre><code>INPUT
 </code></pre>
 <ul>
@@ -114,7 +114,7 @@
 <li>"Mxy": Twisting moments.</li>
 <li>"Vx": Shear forces in x-direction.</li>
 <li>"Vy": Shear forces in y-direction.</li>
-<li>"Mx_Rd_+": Required positive bending resistance in x-direction. </li>
+<li>"Mx_Rd_+": Required positive bending resistance in x-direction.</li>
 <li>"My_Rd_+": Required positive bending resistance in y-direction.</li>
 <li>"Mx_Rd_-": Required negative bending resistance in x-direction.</li>
 <li>"My_Rd_-": Required negative bending resistance in y-direction.</li>
@@ -125,16 +125,16 @@
 <li>
 <p><strong>plotType = "isolines"</strong>: String representing the type of plot. Possible values are:</p>
 <ul>
-<li>"isolines"(default): Lines with the same output-value are extrapolated and plotted. </li>
+<li>"isolines"(default): Lines with the same output-value are extrapolated and plotted.</li>
 <li>"3d": 3-dimensional plot.</li>
 <li>"text": The values at the data-points are printed as text near to the data-points.</li>
 <li>"text+mesh": The values at the data-points are printed as text near to the data-points on the model's mesh.</li>
 </ul>
 </li>
 <li>
-<p><strong>saveToSVG = False</strong>: if True, saves the plot as SVG in the current folder. </p>
+<p><strong>saveToSVG = False</strong>: if True, saves the plot as SVG in the current folder.</p>
 </li>
-<li><strong>saveImage = False</strong>: Experimental. </li>
+<li><strong>saveImage = False</strong>: Experimental.</li>
 </ul>
 <pre><code>RETURN
 </code></pre>
